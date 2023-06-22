@@ -1,1 +1,18 @@
+#root{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainSection{
+  flex-grow: 1;
+}
+
+body{
+  background-image: url('./assets/imagen-cocina.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
 
