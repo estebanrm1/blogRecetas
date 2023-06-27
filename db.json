@@ -29,5 +29,14 @@
     {
       "id": 3
     }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombreUsuario":"Admin1",
+      "email": "admin1@gmail.com",
+      "password":"123456aA"
+    }
   ]
+
 }
