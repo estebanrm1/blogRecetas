@@ -2,6 +2,8 @@ import { Table, Button } from "react-bootstrap";
 import ItemReceta from "./recetas/ItemReceta";
 import { obtenerListaRecetas } from "../helpers/queries";
 import { useState, useEffect } from "react";
+import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const Administrador = () => {
     const [recetas, SetRecetas] = useState([]);
@@ -26,9 +28,9 @@ const Administrador = () => {
             <div className="container">
                 <div className="d-flex justify-content-between align-items-center mt-5">
                     <h1 className="display-6">Productos disponibles</h1>
-                    <Button className="btn btn-primary" to="/administrar/crear">
+                    <Link className="btn btn-primary" to="/administrar/crear-receta">
                         Agregar
-                    </Button>
+                    </Link>
                 </div>
                 <hr />
                 <Table responsive striped bordered hover>
@@ -44,7 +46,11 @@ const Administrador = () => {
                     </thead>
                     <tbody>
                         {recetas.map((receta) => (
-                            <ItemReceta key={receta.id} receta={receta}></ItemReceta>
+                            <ItemReceta 
+                            key={receta.id}
+                            recetas={recetas} 
+                            receta={receta}
+                            SetRecetas={SetRecetas}></ItemReceta>
                         ))}
                     </tbody>
                 </Table>

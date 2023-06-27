@@ -11,6 +11,18 @@ const CrearReceta = () => {
         reset,
     } = useForm();
 
+
+    const onSubmit = (recetaNueva) => {
+        console.log(recetaNueva);
+        if(respuesta.estatus ===201){
+            Swal.fire('Producto creado', `El producto ${recetaNueva.nombreReceta} fue creado correctamente`, 'success');
+        reset();
+        }else{
+        Swal.fire('Ocurrio un error', `El producto ${recetaNueva.nombreReceta} no pudo ser creado`, 'error');
+        }
+    }
+
+
     return (
         <section className="container mainSection">
             <h1 className="display-4 mt-5">Nuevo producto</h1>
@@ -20,7 +32,7 @@ const CrearReceta = () => {
                     <Form.Label>Receta*</Form.Label>
                     <Form.Control
                         type="text"
-                        placeholder="Ej: Cafe"
+                        placeholder="Ej: Pollo a la portuguesa"
                         {...register("nombreReceta", {
                             required: "El nombre de la receta es obligatorio",
                             minLength: {
@@ -38,25 +50,25 @@ const CrearReceta = () => {
                     </Form.Text>
 
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formPrecio">
-                    <Form.Label>Precio*</Form.Label>
+                <Form.Group className="mb-3" controlId="formDuracion">
+                    <Form.Label>Duracion*</Form.Label>
                     <Form.Control
                         type="number"
-                        placeholder="Ej: 50"
-                        {...register("precio", {
-                            required: "El precio del producto es obligatorio",
+                        placeholder="Ej: 50 (minutos)"
+                        {...register("duracion", {
+                            required: "El tiempo de la receta es obligatorio",
                             min: {
                                 value: 1,
-                                message: "El precio minimo es de $1",
+                                message: "la duracion mini es de 1",
                             },
                             max: {
                                 value: 10000,
-                                message: "El precio maximo es de $10000",
+                                message: "El tiempo maximo es de 10000",
                             },
                         })}
                     />
                     <Form.Text className="text-danger">
-                        {errors.precio?.message}
+                        {errors.duracion?.message}
                     </Form.Text>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formImagen">
@@ -64,15 +76,15 @@ const CrearReceta = () => {
                     <Form.Control
                         type="text"
                         placeholder="Ej: https://www.pexels.com/es-es/vans-en-blanco-y-negro-fuera-de-la-decoracion-para-colgar-en-la-pared-1230679/"
-                        {...register("imagen", {
+                        {...register("url", {
                             required: "La imagen es obligatoria",
                         })}
                     />
                     <Form.Text className="text-danger">
-                        {errors.imagen?.message}
+                        {errors.url?.message}
                     </Form.Text>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formPrecio">
+                <Form.Group className="mb-3" controlId="formCategoria">
                     <Form.Label>Categoria*</Form.Label>
                     <Form.Select
                         {...register("categoria", {
@@ -80,10 +92,10 @@ const CrearReceta = () => {
                         })}
                     >
                         <option value="">Seleccione una opcion</option>
-                        <option value="bebida caliente">Bebida caliente</option>
-                        <option value="bebida fria">Bebida fria</option>
-                        <option value="dulce">Dulce</option>
-                        <option value="salado">Salado</option>
+                        <option value="desayuno">Desayuno</option>
+                        <option value="almuerzo">Almuerzo</option>
+                        <option value="merienda">Merienda</option>
+                        <option value="cena">Cena</option>
                     </Form.Select>
                     <Form.Text className="text-danger">
                         {errors.categoria?.message}

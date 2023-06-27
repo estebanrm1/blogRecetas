@@ -4,8 +4,8 @@
       "id": 1,
       "nombreReceta": "Masa para donas",
       "imagen": "https://cdn0.recetasgratis.net/es/posts/8/3/0/masa_para_donas_51038_600.webp",
-      "tipo": "Merienda",
-      "duracion": "1h 30m",
+      "categoria":"merienda",
+      "duracion": "90m",
       "ingredientes": [
         "1 kilogramo de harina de trigo 0000 o común (8 tazas)",
         "260 gramos de azúcar (1 taza)",
