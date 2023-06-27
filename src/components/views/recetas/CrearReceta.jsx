@@ -28,10 +28,11 @@ const CrearReceta = () => {
 
 
     return (
-        <section className="container mainSection">
+        <section className="container mainSection text-light">
             <h1 className="display-4 mt-5">Nuevo producto</h1>
             <hr />
             <Form onSubmit={handleSubmit(onSubmit)}>
+                
                 <Form.Group className="mb-3" controlId="formNombreReceta">
                     <Form.Label>Receta*</Form.Label>
                     <Form.Control
