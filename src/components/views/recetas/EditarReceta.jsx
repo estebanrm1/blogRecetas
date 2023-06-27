@@ -91,17 +91,17 @@ const EditarReceta = () => {
                         {errors.duracion?.message}
                     </Form.Text>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formImagen">
+                <Form.Group className="mb-3" controlId="formImagenUrl">
                     <Form.Label>Imagen URL*</Form.Label>
                     <Form.Control
                         type="text"
                         placeholder="Ej: https://www.pexels.com/es-es/vans-en-blanco-y-negro-fuera-de-la-decoracion-para-colgar-en-la-pared-1230679/"
-                        {...register("url", {
+                        {...register("imagenUrl", {
                             required: "La imagen es obligatoria",
                         })}
                     />
                     <Form.Text className="text-danger">
-                        {errors.url?.message}
+                        {errors.imagenUrl?.message}
                     </Form.Text>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formCategoria">

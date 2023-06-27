@@ -27,7 +27,7 @@ const Administrador = () => {
         <section className="mainSection text-light bg-secondary bg-opacity-50">
             <div className="container">
                 <div className="d-flex justify-content-between align-items-center mt-5">
-                    <h1 className="display-6">Productos disponibles</h1>
+                    <h1 className="display-6">Recetas disponibles</h1>
                     <Link className="btn btn-primary" to="/administrador/crear-receta">
                         Agregar
                     </Link>
@@ -45,13 +45,13 @@ const Administrador = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {recetas.map((receta) => (
-                            <ItemReceta 
+                        {recetas.map((receta) =><ItemReceta 
                             key={receta.id}
                             recetas={recetas} 
                             receta={receta}
-                            setRecetas={SetRecetas}></ItemReceta>
-                        ))}
+                            setRecetas={SetRecetas}
+                            ></ItemReceta>)
+                            }
                     </tbody>
                 </Table>
             </div>

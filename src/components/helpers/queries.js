@@ -42,10 +42,9 @@ export const crearReceta = async (receta)=>{
             headers:{
                 "Content-Type":"application/json"
             },
-            body: JSON.stringify()
+            body: JSON.stringify(receta)
         });
-        const listaRecetas = await respuesta.json();
-        return listaRecetas;
+        return respuesta;
     } catch (error) {
         console.log(error)
     }

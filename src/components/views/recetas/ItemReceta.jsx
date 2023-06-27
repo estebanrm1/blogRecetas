@@ -48,7 +48,7 @@ const ItemReceta = ({ receta, recetas, setRecetas }) => {
          <td>{receta.id}</td>
          <td>{receta.nombreReceta}</td>
          <td>{receta.categoria}</td>
-         <td>{receta.imagen}</td>
+         <td>{receta.imagenUrl}</td>
          <td>{receta.duracion}</td>
          <td>
             <Link className="btn btn-warning" to={'administrador/editar-receta/' + receta.id}>Editar</Link>
