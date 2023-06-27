@@ -38,7 +38,7 @@ const Administrador = () => {
                         <tr>
                             <th>Cod</th>
                             <th>Receta</th>
-                            <th>Tipo</th>
+                            <th>Categoria</th>
                             <th>URL de Imagen</th>
                             <th>Duracion</th>
                             <th>Opciones</th>
@@ -50,7 +50,7 @@ const Administrador = () => {
                             key={receta.id}
                             recetas={recetas} 
                             receta={receta}
-                            SetRecetas={SetRecetas}></ItemReceta>
+                            setRecetas={SetRecetas}></ItemReceta>
                         ))}
                     </tbody>
                 </Table>

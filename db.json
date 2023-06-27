@@ -4,7 +4,7 @@
       "id": 1,
       "nombreReceta": "Masa para donas",
       "imagen": "https://cdn0.recetasgratis.net/es/posts/8/3/0/masa_para_donas_51038_600.webp",
-      "categoria":"merienda",
+      "categoria": "merienda",
       "duracion": "90m",
       "ingredientes": [
         "1 kilogramo de harina de trigo 0000 o común (8 tazas)",
@@ -22,21 +22,14 @@
         "Bol"
       ],
       "preparacion": "Para empezar a hacer la masa para donas deberás colocar la harina en un tazón amplio, formar un volcán con ella y añadir en el centro la leche y la levadura. Hecho esto, derrite la mantequilla en el microondas y mézclala con la harina y el resto de los ingredientes, es decir, incorpora los huevos, el azúcar y la vainilla. Amasa todo junto hasta conseguir una textura lisa y elástica, lo que te llevará de 20 a 30 minutos. El resultado debe ser una masa que no se quede pegada en las manos, pero un tanto pegajosa al mismo tiempo. Cuando la masa de las donas no se quede pegada en tus manos, haz una bola con ella y déjala dentro del recipiente para que repose durante una hora y duplique su volumen. Es aconsejable que cubras la masa con un paño limpio o papel film.Recuerda que esta masa te servirá para hacer donas caseras horneadas y también donas fritas si lo prefieres. Pasado este tiempo, la masa tiene que haber duplicado su volumen. Entonces, sin golpearla, extiéndela con un rodillo hasta alcanzar 1 cm de grosor. Ten presente que todavía debe reposar un poco más, por lo que crecerá de nuevo. Con la masa ya estirada, corta las donas con el diámetro deseado y resérvalas sobre una bandeja forrada con papel vegetal o sulfurizado. Cuando tengas las donas caseras ya cortadas, deberás dejarlas reposar durante 10 minutos más para que aumenten su tamaño. Ahora tienes dos opciones, puedes hacer donas fritas o al horno. Para cocinar la masa para donas fritas solo debes calentar abundante aceite e introducirlas de una en una o en tandas pequeñas. Dales la vuelta a menudo para que se cocinen de forma pareja y Resérvalas sobre papel absorbente cuando estén doradas. Para hacer las donas caseras al horno, pecalienta el horno a 180 ºC y hornéalas durante 10 minutos. Ten presente que las donas horneadas quedan menos jugosas, con una consistencia esponjosa pero no tan blanda como la de las cocinadas en aceite. Si lo deseas, puedes decorar tus donas con frosting de fresa, ganaché de chocolate o glaseado blanco para donas. Otra opción totalmente válida y mucho más sencilla es espolvorear un poco de azúcar glas, consulta nuestra receta para elaborar el tuyo propio. Como has podido comprobar, estas son unas donas caseras fáciles, cuya principal dificultad reside en ser paciente durante el amasado para lograr esa textura lisa. No obstante, si después de consultar la receta de donas te queda alguna duda, no te pierdas nuestro vídeo en el que te mostramos cómo hacer donas de una forma más visual y sencilla. Aunque"
-    },
-    {
-      "id": 2
-    },
-    {
-      "id": 3
     }
   ],
   "usuarios": [
     {
       "id": 1,
-      "nombreUsuario":"Admin1",
+      "nombreUsuario": "Admin1",
       "email": "admin1@gmail.com",
-      "password":"123456aA"
+      "password": "123456aA"
     }
   ]
-
 }
