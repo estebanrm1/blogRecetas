@@ -41,3 +41,15 @@ export const editarReceta = async (receta, id)=>{
         console.log(error)
     }
 }
+
+export const borrarReceta = async (id)=>{
+    try {
+        const respuesta = await fetch(URL_recetas+'/'+id, {
+            method: "DELETE",
+        });
+        return respuesta;
+    } catch (error) {
+        console.log(error)
+    }
+}
+
