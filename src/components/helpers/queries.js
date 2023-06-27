@@ -53,3 +53,12 @@ export const borrarReceta = async (id)=>{
     }
 }
 
+export const obtenerReceta = async (id)=>{
+    try {
+        const respuesta = await fetch(URL_recetas+'/'+id);
+        const receta = await respuesta.json();
+        return receta;
+    } catch (error) {
+        console.log(error)
+    }
+}
