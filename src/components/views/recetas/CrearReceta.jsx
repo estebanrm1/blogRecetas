@@ -5,27 +5,27 @@ import { crearReceta } from "../../helpers/queries";
 
 
 const CrearReceta = () => {
-
+    
     const {
         register,
         handleSubmit,
         formState: { errors },
         reset,
     } = useForm();
+    
 
-
-    const onSubmit = (recetaNueva) => {
-        console.log(recetaNueva);
-        crearReceta(recetaNueva).then((respuesta) => {
+    const onSubmit = async (receta) => {
+        // Crear el objeto de receta
+        console.log(receta);
+        crearReceta(receta).then((respuesta) => {
             if (respuesta.status === 201) {
-                Swal.fire('Receta creada', `La receta ${recetaNueva.nombreReceta} fue creada correctamente`, 'success');
+                Swal.fire('Receta creada', `La receta ${receta.nombreReceta} fue creada correctamente`, 'success');
                 reset();
             } else {
-                Swal.fire('Ocurrio un error', `La receta ${recetaNueva.nombreReceta} no pudo ser creada`, 'error');
+                Swal.fire('Ocurrio un error', `La receta ${receta.nombreReceta} no pudo ser creada`, 'error');
             }
         })
     }
-
 
     return (
         <section className="container text-light">
@@ -92,9 +92,9 @@ const CrearReceta = () => {
                     <Form.Label>Ingrese la preparacion*</Form.Label>
                     <FloatingLabel className="text-secondary" controlId="formPreparacion" label="Preparación:">
                         <Form.Control as="textarea" style={{ height: '100px' }}
-                        {...register("preparacion",{
-                            required:"La preparación es obligatoria"
-                        })}/>
+                            {...register("preparacion", {
+                                required: "La preparación es obligatoria"
+                            })} />
                     </FloatingLabel>
                     <Form.Text className="text-danger">
                         {errors.preparacion?.message}

@@ -114,7 +114,7 @@ const EditarReceta = () => {
                     </Form.Text>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formCategoria">
-                    <Form.Label>Categoria*</Form.Label>
+                    <Form.Label>Elija para que momento del dia es ideal*</Form.Label>
                     <Form.Select
                         {...register("categoria", {
                             required: "La categoria es obligatoria",
