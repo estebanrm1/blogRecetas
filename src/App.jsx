@@ -7,6 +7,7 @@ import Menu from "./components/common/Menu";
 import Administrador from "./components/views/Administrador";
 import CrearReceta from "./components/views/recetas/CrearReceta";
 
+
 function App() {
   
 

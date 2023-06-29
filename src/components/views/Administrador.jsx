@@ -33,7 +33,7 @@ const Administrador = () => {
                     </Link>
                 </div>
                 <hr />
-                <Table responsive striped bordered hover>
+                <Table responsive striped bordered hover variant="dark">
                     <thead>
                         <tr>
                             <th>Cod</th>

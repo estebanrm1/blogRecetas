@@ -48,11 +48,11 @@ const ItemReceta = ({ receta, recetas, setRecetas }) => {
          <td>{receta.id}</td>
          <td>{receta.nombreReceta}</td>
          <td>{receta.categoria}</td>
-         <td>{receta.imagenUrl}</td>
-         <td>{receta.duracion}</td>
+         <td><span className="d-inline-block text-truncate" style={{ maxWidth: 180 }}>{receta.imagenUrl}</span></td>
+         <td>{receta.duracion} min.</td>
          <td>
             <Link className="btn btn-warning" to={'administrador/editar-receta/' + receta.id}>Editar</Link>
-            <Button variant="danger" onClick={handleDelete}>
+            <Button className="mx-1" variant="danger" onClick={handleDelete}>
                Borrar
             </Button>
          </td>

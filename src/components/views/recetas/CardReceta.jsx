@@ -1,20 +1,33 @@
 import { Col, Card, Button } from "react-bootstrap";
+import ListGroup from 'react-bootstrap/ListGroup';
+import { Link } from "react-router-dom";
+import ModalReceta from "./ModalReceta";
+import { useState } from "react";
 
-const CardReceta = ({receta}) => {
+const CardReceta = ({ receta }) => {
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
-        <Col md={4} ld={3} className="mb-3">
-            <Card>
-                <Card.Img
-                    variant="top"
-                    src="https://images.pexels.com/photos/10273537/pexels-photo-10273537.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                />
-                <Card.Body>
-                    <Card.Title>MOCHACCINO CANELA</Card.Title>
-                    <Card.Text>$1.740,00</Card.Text>
-                    <Button variant="primary">Ver detalle</Button>
-                </Card.Body>
-            </Card>
-        </Col>
+        <>
+        <Card className="m-3 bg-body-secondary bg-opacity-75" style={{ width: '18rem' }}>
+            <Card.Img className="p-2" style={{ height: '9.5rem' }} variant="top" src={receta.imagenUrl}/>
+            <Card.Body>
+                <Card.Title>{receta.nombreReceta}</Card.Title>
+            </Card.Body>
+            <ListGroup className="list-group-flush">
+                <ListGroup.Item>{receta.categoria}</ListGroup.Item>
+                <ListGroup.Item>Duracion: {receta.duracion} min.</ListGroup.Item>
+            </ListGroup>
+            <Card.Body>
+                <Button className="btn btn-primary" type="submit" onClick={handleShow}>Ver receta</Button>
+            </Card.Body>
+        </Card>
+        <ModalReceta receta={receta} show={show} handleClose={handleClose}></ModalReceta>
+        </>
     );
 };
 
