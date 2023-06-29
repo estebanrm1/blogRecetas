@@ -37,7 +37,7 @@ const Inicio = () => {
                         </div>
                     ) : (
                         recetas.map((receta) => (
-                            <CardReceta key={receta.id} receta={receta}></CardReceta>
+                            <CardReceta key={receta.id} ingredientes={receta.ingredientes} receta={receta}></CardReceta>
                         ))
                     )}
                 </Row>
