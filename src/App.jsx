@@ -18,7 +18,6 @@ function App() {
 <Route exact path="/" element={<Inicio></Inicio>}></Route>
 <Route exact path="/administrador" element={<Administrador></Administrador>}></Route>
 <Route exact path="/administrador/crear-receta" element={<CrearReceta></CrearReceta>}></Route>
-
 </Routes>
 <Footer></Footer>
 </BrowserRouter>

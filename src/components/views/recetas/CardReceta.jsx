@@ -13,7 +13,7 @@ const CardReceta = ({ receta }) => {
 
     return (
         <>
-        <Card className="m-3 bg-body-secondary bg-opacity-75" style={{ width: '18rem' }}>
+        <Card className="m-3 bg-body-secondary bg-opacity-50" style={{ width: '18rem' }}>
             <Card.Img className="p-2" style={{ height: '9.5rem' }} variant="top" src={receta.imagenUrl}/>
             <Card.Body>
                 <Card.Title>{receta.nombreReceta}</Card.Title>

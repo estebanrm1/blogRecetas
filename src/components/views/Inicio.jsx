@@ -26,7 +26,7 @@ const Inicio = () => {
 
 
     return (
-        <section className="text-light mainSection bg-secondary bg-opacity-50">
+        <section className="text-light mainSection">
             <Container>
                 <h1 className="display-6 text-center">Recetas disponibles:</h1>
                 <hr />

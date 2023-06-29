@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button, FloatingLabel, Form, FormGroup, FormLabel } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -49,7 +49,7 @@ const EditarReceta = () => {
             <Form onSubmit={handleSubmit(onSubmit)}>
 
                 <Form.Group className="mb-3" controlId="formNombreReceta">
-                    <Form.Label>Receta*</Form.Label>
+                    <Form.Label>Nombre de la Receta*</Form.Label>
                     <Form.Control
                         type="text"
                         placeholder="Ej: Pollo a la portuguesa"
@@ -68,7 +68,6 @@ const EditarReceta = () => {
                     <Form.Text className="text-danger">
                         {errors.nombreReceta?.message}
                     </Form.Text>
-
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formDuracion">
                     <Form.Label>Duracion*</Form.Label>
@@ -102,6 +101,18 @@ const EditarReceta = () => {
                     />
                     <Form.Text className="text-danger">
                         {errors.imagenUrl?.message}
+                    </Form.Text>
+                </Form.Group>
+                <Form.Group>
+                    <Form.Label>Ingrese la preparacion*</Form.Label>
+                    <FloatingLabel className="text-secondary" controlId="formPreparacion" label="Preparación:">
+                        <Form.Control as="textarea" style={{ height: '100px' }} 
+                        {...register("preparacion",{
+                            required:"La preparación es obligatoria"
+                        })}/>
+                    </FloatingLabel>
+                    <Form.Text className="text-danger">
+                        {errors.preparacion?.message}
                     </Form.Text>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formCategoria">
