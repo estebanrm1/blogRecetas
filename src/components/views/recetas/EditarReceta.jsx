@@ -1,10 +1,9 @@
 import { useEffect } from "react";
-import { Button, FloatingLabel, Form, FormGroup, FormLabel } from "react-bootstrap";
+import { Button, FloatingLabel, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import { editarReceta, obtenerReceta } from "../../helpers/queries";
-
 
 const EditarReceta = () => {
 
@@ -43,11 +42,10 @@ const EditarReceta = () => {
     }
 
     return (
-        <section className="container mainSection">
+        <section className="container text-light">
             <h1 className="display-4 mt-5">Producto:</h1>
             <hr />
-            <Form onSubmit={handleSubmit(onSubmit)}>
-
+            <Form className="mb-3" onSubmit={handleSubmit(onSubmit)}>
                 <Form.Group className="mb-3" controlId="formNombreReceta">
                     <Form.Label>Nombre de la Receta*</Form.Label>
                     <Form.Control
@@ -62,7 +60,7 @@ const EditarReceta = () => {
                             maxLength: {
                                 value: 100,
                                 message: "La cantidad maxima de caracteres es de 100 digitos",
-                            },
+                            }
                         })}
                     />
                     <Form.Text className="text-danger">

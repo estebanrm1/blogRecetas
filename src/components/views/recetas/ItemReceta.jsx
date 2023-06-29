@@ -51,8 +51,8 @@ const ItemReceta = ({ receta, recetas, setRecetas }) => {
          <td><span className="d-inline-block text-truncate" style={{ maxWidth: 180 }}>{receta.imagenUrl}</span></td>
          <td>{receta.duracion} min.</td>
          <td>
-            <Link className="btn btn-warning" to={'administrador/editar-receta/' + receta.id}>Editar</Link>
-            <Button className="mx-1" variant="danger" onClick={handleDelete}>
+            <Link className="btn btn-warning" to={'/editar-receta/'+ receta.id}>Editar</Link>
+            <Button className="mx-lg-1 my-1 my-lg-0" variant="danger" onClick={handleDelete}>
                Borrar
             </Button>
          </td>

@@ -28,7 +28,7 @@ const CrearReceta = () => {
 
 
     return (
-        <section className="container mainSection text-light">
+        <section className="container text-light">
             <h1 className="display-4 mt-5">Nuevo producto</h1>
             <hr />
             <Form onSubmit={handleSubmit(onSubmit)} className="my-3">
